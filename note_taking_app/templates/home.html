@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NotesApp</title> <!--#changed title-->
+    <!-- added Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+    
+    <h1 class="text-center">Notes</h1> <!--added heading-->
+    
+    <!--updated form method -->
+    <form action="" method="post">
+        
+        <input type="text"  class="form-control" name="note" placeholder="Enter a note">
+        
+        <!--added type for button --> 
+        <button class="btn btn-primary" type="submit">Add Note</button>
+        
+    </form>
+
+    <ul class="list-group list-group-flush">
+    {% for note in notes%}
+        <li class="list-group-item">
+            {{ note }}
+        </li>
+    {% endfor %}
+    </ul>
+</body>
+</html>
